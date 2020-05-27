@@ -239,6 +239,8 @@ void kalman_loop(const emlrtStack *sp, const real_T z[620], real_T y[620])
     }
 
     /*  Compute the estimated measurements */
+    /*  Single precision output */
+    /* out = single(a) * b; */
     /*  Double precision output */
     for (i = 0; i < 2; i++) {
       d = 0.0;
@@ -249,8 +251,6 @@ void kalman_loop(const emlrtStack *sp, const real_T z[620], real_T y[620])
       y[i + (n << 1)] = d;
     }
 
-    /*  Single precision output */
-    /* out = single(a) * b; */
     /* y = H * x_est; */
     /*  of the function */
     if (*emlrtBreakCheckR2012bFlagVar != 0) {

@@ -10,5 +10,6 @@ for idx = 1: numPts
     y = kalmanfilter(z);        % Call Kalman filter to estimate the position
     plot_trajectory(z,y);    % Plot the results
 end
+saveas(gcf,'kalman_debug.png')
 hold;
 end   % of the function
