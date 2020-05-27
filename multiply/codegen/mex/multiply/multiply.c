@@ -80,8 +80,14 @@ static const mxArray *emlrt_marshallOut(const real32_T u)
 
 real32_T multiply(real_T a, real_T b)
 {
+  real32_T out;
+
+  /*  Single precision output */
+  out = (real32_T)a * (real32_T)b;
+
   /*  Double precision output */
-  return (real32_T)a * (real32_T)b;
+  /* out = a * b; */
+  return out;
 }
 
 void multiply_api(const mxArray * const prhs[2], int32_T nlhs, const mxArray
