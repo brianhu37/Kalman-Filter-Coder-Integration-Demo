@@ -1,7 +1,8 @@
 # ninja log v5
-19	321	6122899194394294	build/win64/multiply.obj	c9209f6e3090f4a2
-9	328	6122899194394294	build/win64/c_mexapi_version.obj	189921c66c6e7cae
-1	334	6122899194404287	build/win64/_coder_multiply_mex.obj	cbe60de601f00dc8
-14	338	6122899194554282	build/win64/rt_nonfinite.obj	8f25dda56825ca0d
-30	340	6122899194554282	build/win64/_coder_multiply_info.obj	1cce5b03e7a87208
-342	581	6122899196234285	multiply_mex.mexw64	42a76f9ad9bd41c3
+29	639	6128386812942642	build/win64/rt_nonfinite.obj	8f25dda56825ca0d
+46	646	6128386813012648	build/win64/multiply.obj	c9209f6e3090f4a2
+41	651	6128386812942642	build/win64/_coder_multiply_mex.obj	cbe60de601f00dc8
+35	653	6128386812942642	build/win64/_coder_multiply_info.obj	1cce5b03e7a87208
+54	662	6128386813282639	build/win64/c_mexapi_version.obj	189921c66c6e7cae
+0	688	6128386813022641	build/win64/rtwhalf.obj	1c1965a9c39871df
+691	998	6128386816612659	multiply_mex.mexw64	ba6f8ba820718a17
