@@ -3,7 +3,7 @@ addpath([pwd '\multiply'])
 
 %% Run Integration Test in MATLAB
 load position.mat
-ObjTrack(position)
+%ObjTrack(position)
 %runtests('TestKalmanFilter');
 
 %% Create configuration object of class 'coder.MexCodeConfig'.

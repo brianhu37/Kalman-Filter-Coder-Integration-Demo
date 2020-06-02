@@ -240,19 +240,19 @@ void kalman_loop(const emlrtStack *sp, const real_T z[620], real_T y[620])
 
     /*  Compute the estimated measurements */
     /*  Single precision output */
-    /* out = single(a) * b; */
     /*  Double precision output */
+    /* out = a * b; */
+    /* y = H * x_est; */
+    /*  of the function */
     for (i = 0; i < 2; i++) {
       d = 0.0;
       for (i1 = 0; i1 < 6; i1++) {
         d += (real_T)c_a[i + (i1 << 1)] * x_est[i1];
       }
 
-      y[i + (n << 1)] = d;
+      y[i + (n << 1)] = (real32_T)d;
     }
 
-    /* y = H * x_est; */
-    /*  of the function */
     if (*emlrtBreakCheckR2012bFlagVar != 0) {
       emlrtBreakCheckR2012b(sp);
     }

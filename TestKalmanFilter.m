@@ -7,7 +7,7 @@ classdef TestKalmanFilter < matlab.unittest.TestCase
             load position.mat;
             load expected_error.mat;
             
-            tolerance = 1e-08;
+            tolerance = 1e-07;
             z = position;
             x = kalman_loop(z);
             y = kalman_loop(z);
@@ -28,13 +28,6 @@ classdef TestKalmanFilter < matlab.unittest.TestCase
             
             testCase.verifyEqual(y(:,range), z(:,range), 'AbsTol', tolerance)    % check if all samples are within the absolute tolerance; if not, it'll show which samples didn't make the tolerance
 
-            % For debugging
-%             plot_kalman_filter_trajectory(z,1000*y);
-%            ObjTrack(z)
-% 
-%             [value, location] = max(A(:));
-%             [R,C] = ind2sub(size(A),location);
-%             disp(['Max value is ' num2str(value) ' is is located at [' num2str(R) ',' num2str(C) ']']);
         end
     end
 end

@@ -3,13 +3,14 @@ classdef TestMultiply < matlab.unittest.TestCase
     
     methods ( Test )
         
-        function singleOrDouble( testCase )
+        function verifyTypeMatch( testCase )
             x = 1;
             y = 2;
             z = multiply( x , y );
             outputIsSingle = isa( z , 'single' );
             outputIsDouble = isa( z , 'double' );
-            testCase.verifyTrue( outputIsSingle | outputIsDouble );
+            outputIsHalf = isa( z, 'half' );
+            testCase.verifyTrue( outputIsSingle | outputIsDouble | outputIsHalf );
         end
         
         function multiplywithPi( testCase )
@@ -20,6 +21,8 @@ classdef TestMultiply < matlab.unittest.TestCase
                 t = single(pi*2);
             elseif isa ( z , 'double' ) == true
                 t = double(pi*2);
+            elseif isa ( z, 'half' ) == true
+                t = half(pi*2);
             else
                 t = 0;
             end

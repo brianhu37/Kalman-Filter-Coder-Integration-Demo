@@ -28,6 +28,6 @@ klm_gain = (S \ B)';
 x_est = x_prd + klm_gain * (z - H * x_prd);
 p_est = p_prd - klm_gain * H * p_prd;
 % Compute the estimated measurements
-y = double(multiply(H, x_est));
+y = multiply(H, x_est);
 %y = H * x_est;
 end                % of the function
