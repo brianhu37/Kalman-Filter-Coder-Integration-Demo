@@ -31,7 +31,7 @@ static real_T c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
   emlrtMsgIdentifier *msgId);
 static real_T emlrt_marshallIn(const emlrtStack *sp, const mxArray *a, const
   char_T *identifier);
-static const mxArray *emlrt_marshallOut(const real16_T u);
+static const mxArray *emlrt_marshallOut(const real32_T u);
 
 /* Function Definitions */
 static real_T b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
@@ -67,20 +67,20 @@ static real_T emlrt_marshallIn(const emlrtStack *sp, const mxArray *a, const
   return y;
 }
 
-static const mxArray *emlrt_marshallOut(const real16_T u)
+static const mxArray *emlrt_marshallOut(const real32_T u)
 {
   const mxArray *y;
   const mxArray *m;
   y = NULL;
-  m = emlrtCreateNumericMatrix(1, 1, mxHALF_CLASS, mxREAL);
-  *(real16_T *)emlrtMxGetData(m) = u;
+  m = emlrtCreateNumericMatrix(1, 1, mxSINGLE_CLASS, mxREAL);
+  *(real32_T *)emlrtMxGetData(m) = u;
   emlrtAssign(&y, m);
   return y;
 }
 
-real16_T multiply(real_T a, real_T b)
+real32_T multiply(real_T a, real_T b)
 {
-  return doubleToHalf(a * b);
+  return (real32_T)(a * b);
 }
 
 void multiply_api(const mxArray * const prhs[2], int32_T nlhs, const mxArray

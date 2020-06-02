@@ -22,7 +22,7 @@ extern emlrtCTX emlrtRootTLSGlobal;
 extern emlrtContext emlrtContextGlobal;
 
 /* Function Declarations */
-real16_T multiply(real_T a, real_T b);
+real32_T multiply(real_T a, real_T b);
 void multiply_api(const mxArray * const prhs[2], int32_T nlhs, const mxArray
                   *plhs[1]);
 void multiply_atexit(void);
