@@ -1,3 +1,3 @@
 function out = multiply(a,b)
-out = half(a * b);
+out = a * b;
 end
