@@ -1,8 +1,5 @@
-%% Run local unit tests
-runtests('TestMultiply')
-
 %% Create configuration object of class 'coder.MexCodeConfig'.
-disp('Unit tests passed. Generating MEX file...')
+disp('Generating MEX file...')
 cfg = coder.config('mex');
 cfg.FilePartitionMethod = 'SingleFile';
 cfg.GenerateReport = true;

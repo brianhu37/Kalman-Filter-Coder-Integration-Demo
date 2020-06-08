@@ -239,9 +239,6 @@ void kalman_loop(const emlrtStack *sp, const real_T z[620], real_T y[620])
     }
 
     /*  Compute the estimated measurements */
-    /*  Single precision output */
-    /*  Double precision output */
-    /* out = a * b; */
     /* y = H * x_est; */
     /*  of the function */
     for (i = 0; i < 2; i++) {

@@ -9,5 +9,6 @@
 
 /* Include files */
 #include "rtwtypes.h"
+#include "rtwhalf.h"
 
 /* End of code generation (multiply_types.h) */
